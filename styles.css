@@ -308,4 +308,14 @@ input:checked + .slider:before {
     .language-buttons button {
         padding: 8px 12px; /* Espaciado interno reducido para botones */
     }
+}
+
+.buy-me-a-coffee {
+    text-align: center; /* Centra el logotipo */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.buy-me-a-coffee img {
+    max-width: 100%; /* Asegura que el logotipo no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción del logotipo */
 } 
