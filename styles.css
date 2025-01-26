@@ -313,6 +313,8 @@ input:checked + .slider:before {
 .buy-me-a-coffee {
     text-align: center; /* Centra el logotipo */
     margin-top: 20px; /* Espaciado superior */
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .coffee-link {
@@ -328,4 +330,13 @@ input:checked + .slider:before {
 .coffee-image {
     max-width: 100%; /* Asegura que el logotipo no exceda el ancho del contenedor */
     height: auto; /* Mantiene la proporción del logotipo */
+}
+
+.buy-me-a-coffee a {
+    color: white; /* Cambia el color del texto del enlace a blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.buy-me-a-coffee a:hover {
+    text-decoration: underline; /* Agrega un subrayado al pasar el mouse */
 } 
