@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sueños Distópicos, Historias del Límite Del Colapso</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-overlay"></div> <!-- Capa de gradiente -->
+    
+    <!-- Agregar el logo -->
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo" class="logo">
+    </div>
+    
+    <!-- Botones de idioma en la parte superior izquierda -->
+    <div class="language-buttons">
+        <button id="btn-english" onclick="window.location.href='index.html'">English</button>
+        <button id="btn-spanish" onclick="window.location.href='index_es.html'">Español</button>
+    </div>
+    
+    <!-- Reproductor de audio y toggle -->
+    <audio id="background-audio" loop>
+        <source src="chapter0.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <div class="sound-controls">
+        <label class="sound-toggle">
+            <input type="checkbox" id="sound-toggle" checked>
+            <span class="slider"></span>
+            <span class="toggle-label">Sound</span>
+        </label>
+    </div>
+    
+    <div class="relatocontainer">
+        <h2>Capítulo 0: Introducción</h2>
+        <h3>"La Primera Grieta en el Espejo"</h3>
+    </div>
+    
+    <div class="animated-text">
+        <p id="text"></p>
+        <span class="cursor">|</span> <!-- Cursor parpadeante -->
+    </div>
+    
+    <!-- Reloj de cuenta atrás -->
+    <div class="countdown-container">
+        <h4>Tiempo estimado para el próximo capítulo:</h4>
+        <div id="countdown"></div>
+    </div>
+    
+    <!-- Agregar el copyright y el ícono de LinkedIn -->
+    <div class="footer">
+        <p>&copy; <span id="current-year"></span> Hecho con <span class="heart-icon">❤️</span> Santos Martínez Perandones. Sígueme en <a href="https://www.linkedin.com/in/santos-marper/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="linkedin-icon"></a></p>
+    </div>
+    
+    <script src="script.js"></script> <!-- Asegúrate de que el script esté vinculado -->
+</body>
+</html> 
