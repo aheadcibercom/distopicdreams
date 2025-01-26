@@ -57,11 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Controlar el sonido con el interruptor
     const soundToggle = document.getElementById('sound-toggle');
+    const toggleLabel = document.getElementById('toggle-label');
+
     soundToggle.addEventListener('change', () => {
         if (soundToggle.checked) {
             audio.play();
+            toggleLabel.textContent = "Sound On"; // Cambia el texto a "Sound On"
         } else {
             audio.pause();
+            toggleLabel.textContent = "Sound Off"; // Cambia el texto a "Sound Off"
         }
     });
 

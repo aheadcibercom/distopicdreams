@@ -223,6 +223,12 @@ input:checked + .slider:before {
     transform: translateX(20px); /* Mueve el círculo a la derecha */
 }
 
+.toggle-label {
+    margin-left: 10px; /* Espaciado a la izquierda del texto */
+    color: #00ffcc; /* Color del texto */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+}
+
 .logo-container {
     text-align: right; /* Alinea el logo a la derecha */
     margin: 20px 20px 20px 0; /* Espaciado: arriba, derecha, abajo, izquierda */
