@@ -103,10 +103,10 @@ p {
 }
 
 .language-buttons {
-    position: absolute; /* Posiciona los botones de forma absoluta */
-    top: 20px; /* Ajusta la posición vertical */
-    left: 20px; /* Ajusta la posición horizontal */
-    z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+    position: absolute;
+    top: 70px; /* Mover los botones debajo del logo */
+    left: 10px;
+    z-index: 2;
 }
 
 .language-buttons button {
@@ -231,10 +231,11 @@ input:checked + .slider:before {
 }
 
 .logo-container {
-    text-align: right; /* Alinea el logo a la derecha */
-    margin: 20px 20px 20px 0; /* Espaciado: arriba, derecha, abajo, izquierda */
-    z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
-    position: relative; /* Necesario para que el z-index funcione */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: auto;
 }
 
 .logo {
@@ -270,71 +271,153 @@ input:checked + .slider:before {
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
-    h2 {
-        font-size: 1.2em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    }
-
-    h3 {
-        font-size: 1em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    }
-
-    p {
-        font-size: 0.9em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-    }
-
     .relatocontainer {
-        padding: 15px; /* Espaciado interno reducido */
+        top: 15%; /* Ajustado para mejor posicionamiento en móviles */
+        width: 80%; /* Reducir el ancho en pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .animated-text {
+        top: 50%; /* Ajustado para evitar superposición */
+        width: 80%; /* Reducir el ancho */
+        padding: 15px;
+    }
+
+    .countdown-container {
+        position: fixed; /* Cambiar a posición fija */
+        top: auto; /* Quitar posición top */
+        bottom: 120px; /* Colocar desde abajo */
+        right: 10px;
+        width: auto;
+        font-size: 0.9em;
+    }
+
+    .buy-me-a-coffee {
+        position: fixed; /* Cambiar a posición fija */
+        top: auto; /* Quitar posición top */
+        bottom: 60px; /* Colocar desde abajo */
+        right: 10px;
+        width: auto;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 5px;
+        width: 100%;
+        font-size: 0.7em;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo-container {
+        top: 5px;
+        right: 5px;
+    }
+
+    .logo {
+        max-width: 80px; /* Reducir aún más el tamaño del logo en móviles */
     }
 
     .language-buttons {
-        top: 10px; /* Ajusta la posición vertical */
-        left: 10px; /* Ajusta la posición horizontal */
+        top: 90px; /* Ajustar la posición vertical para evitar superposición */
+        left: 5px;
+    }
+
+    .language-buttons button {
+        padding: 6px 10px;
+        font-size: 0.75em;
+        margin: 2px;
     }
 }
 
 @media (max-width: 480px) {
+    .relatocontainer {
+        top: 20%;
+        width: 90%;
+        padding: 10px;
+    }
+
     h2 {
-        font-size: 1em; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+        font-size: 1em;
     }
 
     h3 {
-        font-size: 0.9em; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+        font-size: 0.9em;
     }
 
     p {
-        font-size: 0.8em; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
+        font-size: 0.8em;
+    }
+
+    .animated-text {
+        top: 55%;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .countdown-container {
+        bottom: 100px;
+        right: 5px;
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .buy-me-a-coffee {
+        bottom: 50px;
+        right: 5px;
+        padding: 8px;
+    }
+
+    .buy-me-a-coffee img {
+        height: 40px;
+    }
+
+    .buy-me-a-coffee a {
+        font-size: 0.7em;
+    }
+
+    .footer {
+        font-size: 0.6em;
+        padding: 3px;
+    }
+
+    .linkedin-icon {
+        width: 30px;
+    }
+
+    .logo {
+        max-width: 60px; /* Reducir aún más para pantallas muy pequeñas */
+    }
+
+    .language-buttons {
+        top: 80px; /* Ajustar para el logo más pequeño */
     }
 
     .language-buttons button {
-        padding: 8px 12px; /* Espaciado interno reducido para botones */
+        padding: 5px 8px;
+        font-size: 0.7em;
     }
 }
 
-.buy-me-a-coffee {
-    position: absolute; /* Posicionamiento absoluto */
-    top: calc(20% + 120px); /* Posición debajo del countdown (20% es la posición del countdown) */
-    right: 20px; /* Alineado con el countdown en la derecha */
-    text-align: center;
-    background: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente similar al countdown */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
-    z-index: 1;
-}
+/* Para pantallas muy pequeñas */
+@media (max-height: 600px) {
+    .relatocontainer {
+        top: 25%;
+    }
 
-.buy-me-a-coffee img {
-    height: 50px;
-    width: auto;
-    margin-bottom: 5px;
-}
+    .animated-text {
+        top: 60%;
+    }
 
-.buy-me-a-coffee a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.8em;
-}
+    .countdown-container {
+        bottom: 90px;
+    }
 
-.buy-me-a-coffee a:hover {
-    text-decoration: underline;
+    .buy-me-a-coffee {
+        bottom: 45px;
+    }
+
+    .footer {
+        bottom: 2px;
+    }
 } 
