@@ -244,17 +244,19 @@ input:checked + .slider:before {
 }
 
 .countdown-container {
-    position: absolute; /* Posiciona el contenedor de forma absoluta */
-    top: 20%; /* Ajusta la posición vertical */
-    right: 20px; /* Ajusta la posición horizontal a la derecha */
-    background: rgba(0, 0, 0, 0.9); /* Fondo semi-transparente más oscuro */
-    color: #00ffcc; /* Color del texto futurista */
-    padding: 10px; /* Espaciado interno reducido */
-    border-radius: 10px; /* Bordes redondeados */
-    text-align: center; /* Centra el texto */
-    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Sombra para dar profundidad */
-    z-index: 1; /* Asegúrate de que esté por encima de la capa de gradiente */
+    position: fixed;
+    bottom: 140px; /* Ajustado para dejar espacio para buy-me-a-coffee */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ffcc;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    z-index: 1;
+    width: auto;
+    max-width: 300px;
 }
 
 .countdown-container h4 {
@@ -267,6 +269,28 @@ input:checked + .slider:before {
     font-weight: bold; /* Negrita para mayor énfasis */
     letter-spacing: 1px; /* Espaciado entre letras para un efecto futurista */
     text-shadow: 0 0 5px rgba(0, 255, 204, 0.7); /* Sombra de texto para un efecto luminoso */
+}
+
+.buy-me-a-coffee {
+    position: fixed;
+    bottom: 70px; /* Posición ajustada para estar debajo del countdown */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    z-index: 1;
+}
+
+.buy-me-a-coffee img {
+    height: 40px;
+}
+
+.buy-me-a-coffee a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 1em;
 }
 
 /* Media Queries para Responsividad */
@@ -284,20 +308,17 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        position: fixed; /* Cambiar a posición fija */
-        top: auto; /* Quitar posición top */
-        bottom: 120px; /* Colocar desde abajo */
+        bottom: 130px;
         right: 10px;
-        width: auto;
+        padding: 8px;
         font-size: 0.9em;
+        max-width: 250px;
     }
 
     .buy-me-a-coffee {
-        position: fixed; /* Cambiar a posición fija */
-        top: auto; /* Quitar posición top */
-        bottom: 60px; /* Colocar desde abajo */
+        bottom: 60px;
         right: 10px;
-        width: auto;
+        padding: 8px;
     }
 
     .footer {
@@ -356,20 +377,21 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        bottom: 100px;
+        bottom: 120px;
         right: 5px;
+        padding: 6px;
         font-size: 0.8em;
-        padding: 8px;
+        max-width: 200px;
     }
 
     .buy-me-a-coffee {
-        bottom: 50px;
+        bottom: 55px;
         right: 5px;
-        padding: 8px;
+        padding: 6px;
     }
 
     .buy-me-a-coffee img {
-        height: 40px;
+        height: 35px;
     }
 
     .buy-me-a-coffee a {
@@ -410,11 +432,11 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        bottom: 90px;
+        bottom: 110px;
     }
 
     .buy-me-a-coffee {
-        bottom: 45px;
+        bottom: 50px;
     }
 
     .footer {
