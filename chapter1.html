@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 1: La Última Vela en la Oscuridad - Sueños Distópicos</title>
+    <title>Chapter 1: The Last Candle in the Dark - Distopic Dreams</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
@@ -17,27 +17,27 @@
     
     <!-- Botones de idioma -->
     <div class="language-buttons">
-        <button id="btn-english" onclick="window.location.href='index.html'">English</button>
-        <button id="btn-spanish" onclick="window.location.href='index_es.html'">Español</button>
+        <button id="btn-english" onclick="window.location.href='chapter1.html'">English</button>
+        <button id="btn-spanish" onclick="window.location.href='chapter1_es.html'">Español</button>
     </div>
     
     <!-- Audio -->
     <audio id="background-audio" loop>
         <source src="chapter1.mp3" type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
+        Your browser does not support the audio element.
     </audio>
     
     <div class="sound-controls">
         <label class="sound-toggle">
             <input type="checkbox" id="sound-toggle" checked>
             <span class="slider"></span>
-            <span class="toggle-label">Sound On</span>
+            <span class="toggle-label" id="toggle-label">Sound On</span>
         </label>
     </div>
     
     <div class="relatocontainer">
-        <h2>Capítulo 1</h2>
-        <h3>"La Última Vela en la Oscuridad"</h3>
+        <h2>Chapter 1</h2>
+        <h3>"The Last Candle in the Dark"</h3>
     </div>
     
     <div class="animated-text">
@@ -46,25 +46,25 @@
     </div>
     
     <!-- Botón del menú -->
-    <button class="menu-button" id="menuButton">Capítulos</button>
+    <button class="menu-button" id="menuButton">Chapters</button>
 
     <!-- Menú desplegable -->
     <div class="chapters-menu" id="chaptersMenu">
         <ul>
-            <li><a href="index_es.html">Capítulo 1: La Última Vela en la Oscuridad</a></li>
-            <li><a href="chapters/chapter0/chapter0_es.html">Capítulo 0: La Primera Grieta en el Espejo</a></li>
+            <li><a href="chapter1.html">Chapter 1: The Last Candle in the Dark</a></li>
+            <li><a href="index.html">Chapter 0: The First Crack in the Mirror</a></li>
         </ul>
     </div>
     
     <!-- Buy Me a Coffee -->
     <div class="buy-me-a-coffee">
         <img src="buy-me-a-coffee.png" alt="Buy Me a Coffee" style="height: 50px; width: auto;">
-        <p><a href="https://buymeacoffee.com/distopicdreams/e/364645" target="_blank" rel="noopener noreferrer">Ir a Buy Me A Coffee</a></p>
+        <p><a href="https://buymeacoffee.com/distopicdreams/e/364645" target="_blank" rel="noopener noreferrer">Buy Me A Coffee</a></p>
     </div>
     
     <!-- Footer -->
     <div class="footer">
-        <p>&copy; <span id="current-year"></span> Hecho con <span class="heart-icon">❤️</span> Santos Martínez Perandones. Sígueme en <a href="https://www.linkedin.com/in/santos-marper/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="linkedin-icon"></a></p>
+        <p>&copy; <span id="current-year"></span> Made with <span class="heart-icon">❤️</span> Santos Martínez Perandones. Follow me on <a href="https://www.linkedin.com/in/santos-marper/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="linkedin-icon"></a></p>
     </div>
     
     <script src="script.js"></script>

@@ -245,7 +245,7 @@ input:checked + .slider:before {
 
 .countdown-container {
     position: fixed;
-    bottom: 250px; /* Aumentado significativamente */
+    bottom: 300px; /* Aumentado drásticamente */
     right: 20px;
     background: rgba(0, 0, 0, 0.9);
     color: #00ffcc;
@@ -273,7 +273,7 @@ input:checked + .slider:before {
 
 .buy-me-a-coffee {
     position: fixed;
-    bottom: 140px; /* Aumentado significativamente */
+    bottom: 180px; /* Aumentado drásticamente */
     right: 20px;
     background: rgba(0, 0, 0, 0.9);
     padding: 10px;
@@ -308,17 +308,21 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        bottom: 220px;
+        bottom: 280px;
         right: 10px;
         padding: 8px;
-        font-size: 0.9em;
-        max-width: 250px;
+        font-size: 0.8em;
+        max-width: 220px;
     }
 
     .buy-me-a-coffee {
-        bottom: 120px;
+        bottom: 160px;
         right: 10px;
         padding: 8px;
+    }
+
+    .buy-me-a-coffee img {
+        height: 30px;
     }
 
     .footer {
@@ -377,25 +381,30 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        bottom: 200px;
+        bottom: 250px;
         right: 5px;
         padding: 6px;
-        font-size: 0.8em;
-        max-width: 200px;
+        font-size: 0.7em;
+        max-width: 180px;
+    }
+
+    .countdown-container h4 {
+        font-size: 0.7em;
+        margin-bottom: 5px;
     }
 
     .buy-me-a-coffee {
-        bottom: 110px;
+        bottom: 140px;
         right: 5px;
         padding: 6px;
     }
 
     .buy-me-a-coffee img {
-        height: 35px;
+        height: 25px;
     }
 
     .buy-me-a-coffee a {
-        font-size: 0.7em;
+        font-size: 0.6em;
     }
 
     .footer {
@@ -432,14 +441,131 @@ input:checked + .slider:before {
     }
 
     .countdown-container {
-        bottom: 180px;
+        bottom: 220px;
+        padding: 5px;
     }
 
     .buy-me-a-coffee {
-        bottom: 100px;
+        bottom: 120px;
+        padding: 5px;
     }
 
     .footer {
         bottom: 5px;
+        padding: 3px;
     }
+}
+
+/* Estilos para el botón del menú */
+.menu-button {
+    position: fixed;
+    top: 120px; /* Ajustado para estar debajo de los botones de idioma */
+    left: 10px; /* Alineado a la izquierda como los botones de idioma */
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ffcc;
+    padding: 10px 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 1000;
+}
+
+/* Estilos para el menú desplegable */
+.chapters-menu {
+    position: fixed;
+    top: 170px; /* Ajustado para estar debajo del botón del menú */
+    left: 10px; /* Alineado con el botón */
+    background: rgba(0, 0, 0, 0.95);
+    width: 300px; /* Ancho fijo más pequeño */
+    max-height: calc(100vh - 400px); /* Altura máxima ajustada para no superponerse con otros elementos */
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 15px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+}
+
+.chapters-menu.active {
+    display: block;
+}
+
+.chapters-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chapters-menu li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.chapters-menu a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+    transition: color 0.3s;
+}
+
+.chapters-menu a:hover {
+    color: #ffcc00;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-button {
+        top: 140px; /* Ajustado para móviles */
+        left: 5px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .chapters-menu {
+        top: 190px; /* Ajustado para móviles */
+        left: 5px;
+        width: 250px; /* Más estrecho en móviles */
+        max-height: calc(100vh - 450px); /* Ajustado para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-button {
+        top: 130px;
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .chapters-menu {
+        top: 170px;
+        width: 200px;
+        font-size: 0.9em;
+    }
+
+    .chapters-menu li {
+        padding: 8px;
+    }
+}
+
+/* Para pantallas muy pequeñas en altura */
+@media (max-height: 600px) {
+    .menu-button {
+        top: 110px;
+    }
+
+    .chapters-menu {
+        top: 150px;
+        max-height: calc(100vh - 300px);
+    }
+}
+
+/* Añadir estilo para el fondo del capítulo 1 */
+.chapter1-bg {
+    background-image: url('chapter1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 } 

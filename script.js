@@ -13,28 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
     Esta no es una historia de cómo cayó el mundo. Es una historia de lo que se alzó de sus cenizas.
     Bienvenidos a los Sueños Distópicos.`;
 
+    // Modificar los textos del Capítulo 1
+    const chapter1Text = `In a city where electricity was a relic of the past, the last candle became a symbol of hope. It flickered weakly in Marta's hands as she walked through the abandoned streets, its light barely piercing the thick fog that had swallowed the world.
+
+    The government had promised eternal energy, but the machines had failed, leaving only silence and shadows. Now, the candle was more than light—it was resistance.
+
+    Marta reached the old library, where a group of survivors gathered. She placed the candle in the center, its flame trembling but alive. "As long as it burns," she said, "we remember what it means to be human."
+
+    Outside, the drones circled, their red eyes scanning for any sign of life. But in that small room, the last candle defied the darkness.`;
+
+    const chapter1TextES = `En una ciudad donde la electricidad era un relicto del pasado, la última vela se convirtió en un símbolo de esperanza. Titilaba débilmente en las manos de Marta mientras caminaba por las calles abandonadas, su luz apenas atravesaba la espesa niebla que había devorado el mundo.
+
+    El gobierno había prometido energía eterna, pero las máquinas fallaron, dejando solo silencio y sombras. Ahora, la vela era más que luz: era resistencia.
+
+    Marta llegó a la antigua biblioteca, donde un grupo de supervivientes se reunía. Colocó la vela en el centro, su llama temblorosa pero viva. "Mientras arda," dijo, "recordamos lo que significa ser humanos."
+
+    Afuera, los drones circulaban, sus ojos rojos escaneando en busca de cualquier señal de vida. Pero en aquella pequeña habitación, la última vela desafiaba a la oscuridad.`;
+
     let index = 0;
     const textElement = document.getElementById('text');
 
-    function type(text) {
-        textElement.innerHTML = ''; // Limpia el texto antes de escribir
-        index = 0; // Reinicia el índice
+    // Modificar la función type para manejar diferentes capítulos
+    function type() {
+        const path = window.location.pathname;
+        let contentToType = '';
+        
+        if (path.includes('chapter0')) {
+            contentToType = path.includes('_es.html') ? spanishText : englishText;
+        } else {
+            contentToType = path.includes('_es.html') ? chapter1TextES : chapter1Text;
+        }
+        
+        textElement.innerHTML = '';
+        index = 0;
+        
         function write() {
-            if (index < text.length) {
-                textElement.innerHTML += text.charAt(index);
+            if (index < contentToType.length) {
+                textElement.innerHTML += contentToType.charAt(index);
                 index++;
-                setTimeout(write, 50); // Ajusta la velocidad de escritura aquí
+                setTimeout(write, 50);
             }
         }
-        write(); // Inicia el efecto de escritura
+        write();
     }
 
-    // Verifica si estamos en la página en español
-    if (window.location.pathname.includes('index_es.html')) {
-        type(spanishText); // Carga el texto en español
-    } else {
-        type(englishText); // Carga el texto en inglés
-    }
+    // Iniciar la animación de texto al cargar la página
+    type();
 
     // Reproducir el audio al cargar la página
     const audio = document.getElementById('background-audio');
@@ -42,13 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Error al intentar reproducir el audio:', error);
     });
 
-    // Agrega eventos a los botones
+    // Modificar los event listeners de los botones de idioma
     document.getElementById('btn-english').addEventListener('click', () => {
-        window.location.href = 'index.html'; // Redirige a la página en inglés
+        const path = window.location.pathname;
+        if (path.includes('chapter1')) {
+            window.location.href = 'chapter1.html'; // Si estamos en el capítulo 1, vamos a su versión en inglés
+        } else {
+            window.location.href = 'index.html'; // Si estamos en el índice, vamos a su versión en inglés
+        }
     });
 
     document.getElementById('btn-spanish').addEventListener('click', () => {
-        window.location.href = 'index_es.html'; // Redirige a la página en español
+        const path = window.location.pathname;
+        if (path.includes('chapter1')) {
+            window.location.href = 'chapter1_es.html'; // Si estamos en el capítulo 1, vamos a su versión en español
+        } else {
+            window.location.href = 'index_es.html'; // Si estamos en el índice, vamos a su versión en español
+        }
     });
 
     // Obtener el año actual y mostrarlo en el pie de página
@@ -92,4 +126,19 @@ document.addEventListener('DOMContentLoaded', () => {
             countdownElement.innerHTML = "¡El capítulo está disponible!";
         }
     }, 1000); // Actualiza cada segundo
+
+    // Funcionalidad del menú de capítulos
+    const menuButton = document.getElementById('menuButton');
+    const chaptersMenu = document.getElementById('chaptersMenu');
+
+    menuButton.addEventListener('click', function() {
+        chaptersMenu.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!menuButton.contains(event.target) && !chaptersMenu.contains(event.target)) {
+            chaptersMenu.classList.remove('active');
+        }
+    });
 }); 
