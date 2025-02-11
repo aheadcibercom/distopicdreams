@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1: La Última Vela en la Oscuridad - Sueños Distópicos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body class="chapter1-bg">
+    <div class="gradient-overlay"></div>
+    
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="logo.jpg" alt="Logo" class="logo">
+    </div>
+    
+    <!-- Botones de idioma -->
+    <div class="language-buttons">
+        <button id="btn-english" onclick="window.location.href='chapter1.html'">English</button>
+        <button id="btn-spanish" onclick="window.location.href='chapter1_es.html'">Español</button>
+    </div>
+    
+    <!-- Audio -->
+    <audio id="background-audio" loop>
+        <source src="chapter1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <div class="sound-controls">
+        <label class="sound-toggle">
+            <input type="checkbox" id="sound-toggle" checked>
+            <span class="slider"></span>
+            <span class="toggle-label">Sound On</span>
+        </label>
+    </div>
+    
+    <div class="relatocontainer">
+        <h2>Capítulo 1</h2>
+        <h3>"La Última Vela en la Oscuridad"</h3>
+    </div>
+    
+    <div class="animated-text">
+        <p id="text"></p>
+        <span class="cursor">|</span>
+    </div>
+    
+    <!-- Botón del menú -->
+    <button class="menu-button" id="menuButton">Capítulos</button>
+
+    <!-- Menú desplegable -->
+    <div class="chapters-menu" id="chaptersMenu">
+        <ul>
+            <li><a href="chapter1_es.html">Capítulo 1: La Última Vela en la Oscuridad</a></li>
+            <li><a href="index_es.html">Capítulo 0: La Primera Grieta en el Espejo</a></li>
+        </ul>
+    </div>
+    
+    <!-- Buy Me a Coffee -->
+    <div class="buy-me-a-coffee">
+        <img src="buy-me-a-coffee.png" alt="Buy Me a Coffee" style="height: 50px; width: auto;">
+        <p><a href="https://buymeacoffee.com/distopicdreams/e/364645" target="_blank" rel="noopener noreferrer">Ir a Buy Me A Coffee</a></p>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; <span id="current-year"></span> Hecho con <span class="heart-icon">❤️</span> Santos Martínez Perandones. Sígueme en <a href="https://www.linkedin.com/in/santos-marper/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" class="linkedin-icon"></a></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
