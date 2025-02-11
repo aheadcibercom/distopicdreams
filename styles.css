@@ -4,7 +4,7 @@ body {
     height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
     background-color: #f4f4f4;
     color: #333;
-    background-image: url('https://raw.githubusercontent.com/aheadcibercom/distopicdreams/main/imagenes/chapter01.jpg'); /* URL directa */
+    background-image: url('https://raw.githubusercontent.com/aheadcibercom/distopicdreams/imagenes/chapter01.jpg'); /* URL directa */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
